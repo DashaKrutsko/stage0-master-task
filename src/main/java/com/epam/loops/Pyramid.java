@@ -3,21 +3,19 @@ package com.epam.loops;
 public class Pyramid {
 
     public void printPyramid(int cathetusLength) {
-        int x = 0;
+
         for (int i = 1; i <= cathetusLength; i++) {
-            String line = "";
+            StringBuilder line = new StringBuilder();
             for (int j = cathetusLength; j>0; j--){
                 if (j<=i){
-                    line = line + j;
+                    line.append(j);
                 } else {
-                    line = line +" ";
+                    line.append(" ");
                 }
             }
             for (int j = 2; j<=cathetusLength; j++){
                 if (j<=i){
-                    line = line +j;
-                } else {
-                    line = line +"";
+                    line.append(j);
                 }
             }
             System.out.println(line);

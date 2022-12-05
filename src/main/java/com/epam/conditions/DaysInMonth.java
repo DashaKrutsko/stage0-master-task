@@ -5,10 +5,12 @@ public class DaysInMonth {
     public void printDays(int year, int month) {
         boolean leapYear = true;
 
-        if (year % 4 != 0){
+        if (year % 4 == 0) {
+            if (year % 100 == 0 && year % 400 != 0) {
+                leapYear = false; }
+        } else {
             leapYear = false;
-        } else if (year % 100 == 0 && year % 400 != 0) {
-            leapYear = false; }
+        }
 
         if (year < 0){
             System.out.println("invalid date");
@@ -18,7 +20,7 @@ public class DaysInMonth {
             System.out.println(30);
         } else if (month == 2  && leapYear) {
             System.out.println(29);
-        } else if (month == 2  && !leapYear) {
+        } else if (month == 2) {
             System.out.println(28);
         } else {
             System.out.println("invalid date");
