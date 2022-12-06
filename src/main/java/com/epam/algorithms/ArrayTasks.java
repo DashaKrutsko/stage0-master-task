@@ -138,9 +138,7 @@ public class ArrayTasks {
                     arr[j + 1] = temp2;
                 }
             }
-        }
 
-        for (int i = arr.length - 1; i >= 0; i--) {
             for (int z = 0; z < arr[i].length; z++) {
                 for (int y = 0; y < arr[i].length - z - 1; y++) {
                     if (arr[i][y + 1] < arr[i][y]) {
@@ -151,6 +149,7 @@ public class ArrayTasks {
                 }
             }
         }
+
         return arr;
     }
 

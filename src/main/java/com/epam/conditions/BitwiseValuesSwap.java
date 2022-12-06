@@ -9,7 +9,4 @@ public class BitwiseValuesSwap {
         System.out.println(first);
         System.out.println(second);
     }
-
-
-
 }
